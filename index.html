@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higienizando as mãos certinho - Jogo de Higienização das Mãos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Boas-Vindas -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <img src="assets/welcome_icon.png" alt="Mãos Limpas" class="welcome-icon">
+            <h1>Higienizando as mãos certinho</h1>
+            <p>A higienização das mãos é o procedimento mais eficaz para prevenir infecções. Neste jogo, você vai praticar a técnica correta de forma divertida.</p>
+            <div class="button-container">
+                <button id="start-soap" class="btn btn-primary">Iniciar com Água e Sabão</button>
+                <button id="start-alcohol" class="btn btn-secondary">Iniciar com Álcool 70%</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela do Jogo -->
+    <div id="game-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <h2 id="game-title">Higienização com Água e Sabão</h2>
+                <div class="timer-container">
+                    <span>Tempo: </span>
+                    <span id="timer">00:00</span>
+                </div>
+                <div class="score-container">
+                    <span>Pontuação: </span>
+                    <span id="score">0</span>
+                </div>
+            </div>
+            
+            <div class="instruction-container">
+                <p id="instruction">O procedimento deve durar entre 40 e 60 segundos. Siga as instruções para higienizar cada área.</p>
+                <p id="how-to-play-instruction" class="how-to-play"></p>
+            </div>
+
+            <div class="game-area">
+                <div class="hand-container">
+                    <img id="hand-image" src="assets/hand_dirty.png" alt="Mão para higienizar">
+                </div>
+                
+                <div class="tools-container">
+                    <div class="tool" id="tool-faucet">
+                        <img src="assets/icon_faucet.png" alt="Torneira">
+                        <span>Molhar</span>
+                    </div>
+                    <div class="tool" id="tool-soap">
+                        <img src="assets/icon_soap.png" alt="Sabão">
+                        <span>Sabão</span>
+                    </div>
+                    <div class="tool" id="tool-alcohol">
+                        <img src="assets/icon_alcohol.png" alt="Álcool">
+                        <span>Álcool 70%</span>
+                    </div>
+                    <div class="tool" id="tool-towel">
+                        <img src="assets/icon_towel.png" alt="Papel Toalha">
+                        <span>Secar</span>
+                    </div>
+                    <div class="tool" id="tool-palms">
+                        <img src="assets/area_palms.png" alt="Palmas">
+                        <span>Palmas</span>
+                    </div>
+                    <div class="tool" id="tool-fingers">
+                        <img src="assets/area_fingers.png" alt="Entre os Dedos">
+                        <span>Entre os Dedos</span>
+                    </div>
+                    <div class="tool" id="tool-back">
+                        <img src="assets/area_back.png" alt="Dorso">
+                        <span>Dorso</span>
+                    </div>
+                    <div class="tool" id="tool-thumbs">
+                        <img src="assets/area_thumbs.png" alt="Polegares">
+                        <span>Polegares</span>
+                    </div>
+                    <div class="tool" id="tool-nails">
+                        <img src="assets/area_nails.png" alt="Pontas dos Dedos">
+                        <span>Pontas dos Dedos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="current-step">Passo 1: Molhe as mãos</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Feedback -->
+    <div id="feedback-screen" class="screen">
+        <div class="container">
+            <h2>Resultado</h2>
+            <div class="feedback-score">
+                    <h3>Sua Pontuação: <span id="final-score">0</span></h3>
+                    <div class="stars" id="star-rating">
+                        <!-- Estrelas serão adicionadas dinamicamente -->
+                    </div>
+                </div>
+                <div class="feedback-message">
+                    <p id="feedback-text">Parabéns! Você completou a higienização corretamente!</p>
+                </div>
+                <div class="feedback-details">
+                    <h4>Detalhes do Desempenho:</h4>
+                    <ul id="performance-details">
+                        <!-- Detalhes serão adicionados dinamicamente -->
+                    </ul>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="play-again" class="btn btn-primary">Jogar Novamente</button>
+                <button id="back-to-menu" class="btn btn-secondary">Voltar ao Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
