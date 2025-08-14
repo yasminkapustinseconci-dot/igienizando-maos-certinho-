@@ -20,7 +20,7 @@ const gameModes = {
         howToPlay: "Clique nas ferramentas e botões das áreas das mãos na ordem indicada para completar a higienização.",
         minTime: 40,
         maxTime: 60,
-        handImage: "assets/hand_dirty.png",
+        handImage: "/assets/hand_dirty.png",
         steps: [
             { id: 'faucet', name: 'Molhe as mãos', tool: 'tool-faucet', points: 10 },
             { id: 'soap', name: 'Aplique sabão', tool: 'tool-soap', points: 10 },
@@ -39,7 +39,7 @@ const gameModes = {
         howToPlay: "Clique nas ferramentas e botões das áreas das mãos na ordem indicada para completar a higienização.",
         minTime: 20,
         maxTime: 30,
-        handImage: "assets/hand_alcohol.png",
+        handImage: "/assets/hand_alcohol.png",
         steps: [
             { id: 'alcohol', name: 'Aplique álcool 70%', tool: 'tool-alcohol', points: 15 },
             { id: 'palms', name: 'Friccione as palmas', tool: 'tool-palms', points: 20 },
@@ -452,4 +452,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+
 
